@@ -3,19 +3,24 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = localFont({
+  src: [
+    {
+      path: "./fonts/Inter-VariableFont_opsz,wght.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Inter-Italic-VariableFont_opsz,wght.ttf",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Jerenico's Personal Portfolio",
+  title: "Jerenico Franssen Semanuel",
   description: "Modern and Futuristic Portfolio",
 };
 
@@ -26,9 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
