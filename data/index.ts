@@ -1,8 +1,7 @@
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "Home", link: "/" },
+  { name: "About Me", link: "/about" },
+  { name: "Projects", link: "/projects" },
 ];
 
 export const projects = [
@@ -94,70 +93,6 @@ export const testimonials = [
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/companies/cloud.svg",
-    nameImg: "/companies/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/companies/app.svg",
-    nameImg: "/companies/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/companies/host.svg",
-    nameImg: "/companies/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/companies/s.svg",
-    nameImg: "/companies/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/companies/dock.svg",
-    nameImg: "/companies/dockerName.svg",
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/experiences/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/experiences/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/experiences/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/experiences/exp4.svg",
   },
 ];
 

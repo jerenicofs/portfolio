@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { FloatingNav } from "@/components/ui/FloatingNav";
+import { navItems } from "@/data";
 
 const inter = localFont({
   src: [
@@ -20,7 +22,7 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Jerenico Franssen Semanuel",
+  title: "Jerenico Franssen",
   description: "Modern and Futuristic Portfolio",
 };
 
@@ -38,6 +40,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <FloatingNav navItems={navItems} />
           {children}
         </ThemeProvider>
       </body>
