@@ -103,10 +103,14 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/socials/twit.svg",
+    img: "/socials/insta.svg",
   },
   {
     id: 3,
+    img: "/socials/twit.svg",
+  },
+  {
+    id: 4,
     img: "/socials/link.svg",
   },
 ];

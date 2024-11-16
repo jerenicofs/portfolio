@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
+import Footer from "@/components/Footer";
 
 const inter = localFont({
   src: [
