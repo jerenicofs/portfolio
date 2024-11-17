@@ -7,6 +7,7 @@ import { FaDownload, FaLongArrowAltLeft } from "react-icons/fa";
 import Footer from "./Footer";
 import { socialMedia } from "@/data";
 import ViewMore from "./ui/ViewMore";
+import Image from "next/image";
 
 const AboutMe = () => {
   return (
@@ -22,9 +23,11 @@ const AboutMe = () => {
 
       <div className="flex flex-col lg:flex-row relative my-20 z-10 items-center lg:items-start ">
         <div className="w-full lg:w-1/3 mb-10 lg:mb-0 flex justify-center py-20 ">
-          <img
+          <Image
             src="/about/self1.png"
             alt="Profile Picture"
+            width={300}
+            height={350}
             className="rounded-lg object-cover 
                        w-40 h-45 md:w-60 md:h-70 lg:w-70 lg:h-90 xl:w-[300px] xl:h-[350px]"
           />
@@ -46,9 +49,9 @@ const AboutMe = () => {
             />
           </span>
           <p className="font-bold text-center lg:text-left mb-6">
-            Hi, I'm Jerenico, a full-stack developer specializing in creating
-            user-friendly and efficient software solutions. I embarked on my
-            programming journey in 2022 and have since developed several
+            Hi, I&apos;m Jerenico, a full-stack developer specializing in
+            creating user-friendly and efficient software solutions. I embarked
+            on my programming journey in 2022 and have since developed several
             impactful projects. I thrive on challenges and am committed to
             constant learning, always aiming to stay ahead of evolving
             technologies. Feel free to reach out to me through the social media
@@ -65,7 +68,7 @@ const AboutMe = () => {
                 className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200
         rounded-lg border border-black-300 transform transition-all duration-200 hover:scale-105 hover:border-[#CBACF9]"
               >
-                <img
+                <Image
                   src={profile.img}
                   alt={profile.img}
                   width={20}
