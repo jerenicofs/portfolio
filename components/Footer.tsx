@@ -2,6 +2,7 @@ import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -39,7 +40,7 @@ const Footer = () => {
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200
         rounded-lg border border-black-300 transform transition-all duration-200 hover:scale-105 hover:border-[#CBACF9]"
             >
-              <img
+              <Image
                 src={profile.img}
                 alt={profile.img}
                 width={20}

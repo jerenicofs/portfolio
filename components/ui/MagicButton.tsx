@@ -1,6 +1,16 @@
 import React from "react";
 
-const MagicButton = ({
+type MagicButtonProps = {
+  title: string;
+  icon: React.ReactNode;
+  position: "left" | "right";
+  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  otherClasses?: string;
+  downloadUrl?: string;
+  href?: string;
+};
+
+const MagicButton: React.FC<MagicButtonProps> = ({
   title,
   icon,
   position,
@@ -8,16 +18,8 @@ const MagicButton = ({
   otherClasses,
   downloadUrl,
   href,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  position: string;
-  handleClick?: () => void;
-  otherClasses?: string;
-  downloadUrl?: string;
-  href?: string;
 }) => {
-  const handleAction = (e: React.MouseEvent) => {
+  const handleAction = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (downloadUrl) {
       e.preventDefault();
       const link = document.createElement("a");
@@ -25,7 +27,7 @@ const MagicButton = ({
       link.download = "CV_Jerenico_Franssen_Semanuel.pdf";
       link.click();
     } else if (handleClick) {
-      handleClick();
+      handleClick(e);
     }
   };
 
