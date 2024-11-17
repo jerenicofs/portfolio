@@ -1,4 +1,4 @@
-import { recentProjects } from "@/data";
+import { projects } from "@/data";
 import React from "react";
 
 import dynamic from "next/dynamic";
@@ -7,18 +7,28 @@ const PinContainer = dynamic(
   { ssr: false }
 );
 
-import { FaLocationArrow, FaLongArrowAltRight } from "react-icons/fa";
+import { FaLocationArrow, FaLongArrowAltLeft } from "react-icons/fa";
+import Footer from "./Footer";
 import ViewMore from "./ui/ViewMore";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div className="pt-20">
+      <div className="mb-8 ml-4">
+        <ViewMore
+          title="Back"
+          icon={<FaLongArrowAltLeft />}
+          position="left"
+          href="/"
+        />
+      </div>
+
       <h1 className="md:text-5xl text-4xl font-bold px-4">
         <span className="text-purple">Featured Projects</span>
       </h1>
 
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {recentProjects.map(({ id, title, des, img, iconLists, link }) => (
+      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10 mb-8">
+        {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
@@ -62,14 +72,7 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-4">
-        <ViewMore
-          title="View More Projects"
-          icon={<FaLongArrowAltRight />}
-          position="right"
-          href="/projects"
-        />
-      </div>
+      <Footer />
     </div>
   );
 };

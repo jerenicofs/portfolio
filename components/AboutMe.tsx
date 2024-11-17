@@ -1,23 +1,32 @@
 "use client";
 import React from "react";
-import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Typewriter from "typewriter-effect";
 import MagicButton from "./ui/MagicButton";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaLongArrowAltLeft } from "react-icons/fa";
 import Footer from "./Footer";
 import { socialMedia } from "@/data";
+import ViewMore from "./ui/ViewMore";
 
 const AboutMe = () => {
   return (
     <div className="min-h-screen">
+      <div className="ml-8 mt-20">
+        <ViewMore
+          title="Back"
+          icon={<FaLongArrowAltLeft />}
+          position="left"
+          href="/"
+        />
+      </div>
+
       <div className="flex flex-col lg:flex-row relative my-20 z-10 items-center lg:items-start ">
         <div className="w-full lg:w-1/3 mb-10 lg:mb-0 flex justify-center py-20 ">
           <img
             src="/about/self1.png"
             alt="Profile Picture"
             className="rounded-lg object-cover 
-                       w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-[300px] xl:h-[350px]"
+                       w-40 h-45 md:w-60 md:h-70 lg:w-70 lg:h-90 xl:w-[300px] xl:h-[350px]"
           />
         </div>
 
@@ -46,20 +55,24 @@ const AboutMe = () => {
             links below!
           </p>
 
-          <div className="flex items-center md:gap-3 gap-6">
+          <div className="flex items-center md:gap-3 gap-6 mb-8 md:mb-0">
             {socialMedia.map((profile) => (
-              <div
+              <a
                 key={profile.id}
+                href={profile.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200
-              rounded-lg border border-black-300"
+        rounded-lg border border-black-300 transform transition-all duration-200 hover:scale-105 hover:border-[#CBACF9]"
               >
                 <img
                   src={profile.img}
                   alt={profile.img}
                   width={20}
                   height={20}
+                  className="transition-colors duration-200 hover:fill-[#CBACF9]"
                 />
-              </div>
+              </a>
             ))}
           </div>
 
