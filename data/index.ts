@@ -126,7 +126,7 @@ export const projects = [
       "/projects/icons/css.svg",
       "/projects/icons/javascript.svg",
     ],
-    link: "https://github.com/jerenicofs/HI-Toyz-Project",
+    link: "https://hi-toyz-delta.vercel.app/",
   },
   {
     id: 6,
